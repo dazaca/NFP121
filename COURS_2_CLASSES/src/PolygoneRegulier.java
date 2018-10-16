@@ -16,4 +16,19 @@ public class PolygoneRegulier extends Object{
 		return "<" + this.nbCotes + "," + this.longCote + ">";
 	}
 	
+	/*public boolean equals(PolygoneRegulier poly) {
+		return poly.nbCotes== this.nbCotes &&
+		 poly.longCote == this.longCote;
+		 }*/
+
+	@Override
+	public boolean equals( Object obj ) {
+	if( ! ( obj instanceof PolygoneRegulier ) ) return false;
+	PolygoneRegulier poly = ( PolygoneRegulier ) obj;
+	return
+	 poly.nbCotes == this.nbCotes &&
+	poly.longCote == longCote;
+	}
+
+	
 }

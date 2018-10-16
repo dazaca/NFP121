@@ -12,9 +12,19 @@ public class TestPolyReg {
 		System.out.println("Poly p1 = " + p1.toString());
 		System.out.println("Poly p2 = " + p2); // appel implicite de toString()
 		
-		Object o = p1;
+		Object o1 = p1;
+		Object o2 = p2;
+		Object o3 = p3;
 		
-		System.out.println(" o: " + o );
+		
+		boolean b1 = o1.equals(o3);
+		boolean b2 = p1.equals(p3);
+		
+		System.out.println(" o: " + o1 );		
+		System.out.println(" p1 == p3 : " + p1.equals(p3));		
+		System.out.println(" o1 == o3 : " + b1);
+		System.out.println(" p1 == p3 : " + b2);
+		
 
 		
 	}
