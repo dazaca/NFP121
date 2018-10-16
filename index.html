@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<html><head><title>NFP121 - TP1</title>
+
+
+
+<style type="text/css">
+body {
+background: silver none repeat scroll 0% 50%;
+color: #333333;
+font-size: 14px;
+font-family: Verdana,Arial;
+}
+table {
+border: 1px solid #808080;
+font-size: 20px;
+}
+h2 {
+color: #c1002a;
+font-family: Verdana,Arial;
+font-size: 30px;
+font-weight: bold;
+}
+h3 {
+color: #c1002a;
+font-family: Verdana,Arial;
+font-size: 20px;
+font-weight: bold;
+}
+hr {
+margin: 15px 0;
+}
+</style>
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }--> </style>
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }--> </style>
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }--> </style><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }--> </style><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }--> </style><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head><body>
+<h2 style="text-align: center;">NFP 121 - TP2</h2>
+<h2 style="text-align: center;">Conversion Fahrenheit - Celsius</h2>
+
+<br>
+<hr> <br>
+<table>
+<tbody>
+<tr>
+<td>Nom: </td>
+<td>Zafra Cámara </td>
+</tr>
+<tr>
+<td>Prénom: </td>
+<td>David </td>
+</tr>
+<tr>
+<td>Matricule: &nbsp; &nbsp; &nbsp;&nbsp; </td>
+<td> FOD_0G5DRNAUKN7</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr>
+<h3>Question 1 : conversion&nbsp; Fahrenheit - Celsius <br>
+</h3>
+
+<div style="margin-left: 40px;">&nbsp;
+&nbsp;L'image suivante est le résultat de l'utilisation des
+quatre instances créées à partir des classes "circle", "triangle" et
+"Square". Pour leur affichage on a utilisé leurs méthodes associées,
+qui nous permettent de changer des proprietés&nbsp;telles que sa
+visibilité, sa couleur ou sa taille. <br>
+<br>
+<div style="text-align: center;"><img style="width: 296px; height: 298px;" alt="Test Objets TP1" src="images/1.png"><br>
+<br>
+<div style="text-align: left;">&nbsp;
+&nbsp;La figure est donc composée de quatre objects (deux circles,
+un
+triangle en un carré) dont ses champs associés son visibles en cliquant
+droit (puis sur "Inspect") sur l'instance créée à partir de chaque
+classe. Cela nous permets de d'apprécier les différentes valeurs
+passées comme paramètres aux méthodes de chaque objet employées pour
+l'affichage du dessin final. C'est le cas, par exemple, de la couleur
+du triangle (dans ce cas jaune), qui a été changé en utilisant la
+méthode "color", à laquelle on a passé la valeur chaîne de caractères
+"yellow" comme paramètre. <br>
+<br>
+<div style="text-align: center;"><img style="height: 518px; width: 825px;" alt="" src="images/2.png"><br>
+<br>
+<div style="text-align: left;"><span style="font-weight: bold;"><br>
+Code-source et documentation:<br>
+</span>
+<div style="margin-left: 40px;">
+<ul>
+<li><small><a href="tp1_c1.html"><span style="font-style: italic; text-decoration: underline;">Classe
+Canvas</span></a><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span>
+&nbsp;(<a href="Canvas.html">DOC</a>)</small></li>
+<li><small><a href="tp1_c2.html"><span style="text-decoration: underline;"><span style="font-style: italic;">Classe Circle</span></span></a>
+&nbsp;(<a href="Circle.html">DOC</a>)</small></li>
+<li><small><a href="tp1_c3.html"><span style="font-style: italic; text-decoration: underline;">Classe
+Square</span></a> &nbsp;(<a href="Square.htm">DOC</a>)</small></li>
+<li><small><a href="tp1_c4.html"><span style="font-style: italic;"><span style="text-decoration: underline;">Classe Triangle</span></span></a>
+&nbsp;(<a href="Triangle.html">DOC</a>)<br>
+</small></li>
+</ul>
+</div>
+<div style="margin-left: 40px;"></div>
+<span style="font-weight: bold;"></span></div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<h3>Question 2 :</h3>
+<div style="margin-left: 40px;"><span style="font-weight: bold;">2.1&nbsp;&nbsp;&nbsp;
+</span>Pour changer la couleur du dessin crée à partir de la
+nouvelle instance "my_picture" appartenant à la classe "Picture", on
+modifie le code source Picture.java. Pour cela on ira sur la méthode
+"draw" puis sur la méthode "sun.changeColor" et on remplacera la valeur
+"yellow" par une nouvelle "blue": ce changement de paramètre dans la
+méthode de l'instance entraîne une modification automatique de la
+couleur de celle-ci. <br>
+</div>
+<div style="text-align: left; margin-left: 40px;">
+<!-- ======================================================== --><!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = --><!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<div style="text-align: center;"></div>
+<div style="text-align: center;"><!-- start source code --><img style="width: 252px; height: 246px;" alt="" src="images/2_1.png"><br>
+<br>
+<div style="text-align: left;">&nbsp;&nbsp;&nbsp;
+Voici le bout de code extrait de la méthode "draw" sur lequel on
+effectue le changement du paramètre sur la méthode sun.changeColor:<br>
+<br>
+<br>
+</div>
+</div>
+<table style="height: 159px; width: 203px;" bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<td align="left" nowrap="nowrap" valign="top">
+<div style="text-align: center;"></div>
+<div style="text-align: left;">
+<div style="text-align: left;"><code><font color="#000000">sun&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Circle</font><font color="#000000">()</font><font color="#000000">;</font></code><br>
+</div>
+<code><font color="#000000">sun.changeColor</font><font color="#000000">(</font><font color="#2a00ff">"blue"</font><font color="#000000">)</font><font color="#000000">;</font></code><br>
+<div style="text-align: center;"><code><font color="#000000">sun.moveHorizontal</font><font color="#000000">(</font><font color="#990000">180</font><font color="#000000">)</font><font color="#000000">;</font></code><br>
+</div>
+<code><font color="#000000">sun.moveVertical</font><font color="#000000">(</font><font color="#000000">-</font><font color="#990000">10</font><font color="#000000">)</font><font color="#000000">;</font></code><br>
+<code><font color="#000000">sun.changeSize</font><font color="#000000">(</font><font color="#990000">60</font><font color="#000000">)</font><font color="#000000">;</font></code><br>
+<code><font color="#000000">sun.makeVisible</font><font color="#000000">()</font><font color="#000000">;</font></code></div>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+<div style="text-align: left;"><br>
+<br>
+<span style="font-weight: bold;">2.2</span>&nbsp;&nbsp;&nbsp;
+Pour la création de la nouvelle donnée de l'instance qui représentera
+le deuxième solei jaune du dessin, on ajoutera au code source
+"Picture.java" une nouvelle instance de type "Circle" (classe Circle)
+qu'on appelera "sun2". Ensuite on utilisera toutes les méthodes de
+l'instance "sun2" (héritées de la classe "Circle") pour effectuer les
+modifications néccessaires:&nbsp; changement de la taille
+("sun2.changeSize"), de sa visibilité ("sun2.makeVisible()"), etc.:<br>
+<br>
+<br>
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = --><!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#ffffff">&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Circle&nbsp;sun2;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Circle</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2.changeColor</font><font color="#000000">(</font><font color="#2a00ff">"yellow"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2.moveHorizontal</font><font color="#000000">(</font><font color="#990000">100</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2.moveVertical</font><font color="#000000">(</font><font color="#000000">-</font><font color="#990000">5</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2.changeSize</font><font color="#000000">(</font><font color="#990000">40</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun2.makeVisible</font><font color="#000000">()</font><font color="#000000">;</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+<div style="text-align: left;">Voici le nouvelle solei
+jaune ajouté: &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;<img style="width: 270px; height: 254px;" alt="" src="images/2_2.png"><br>
+<br>
+<br>
+<br>
+<span style="font-weight: bold;">2.3&nbsp;&nbsp;&nbsp;
+</span>Pour coucher le soleil on créé la méthode <em>sunset()</em>,
+qui nous permettra de faire descendre le soleil bleu. On ajoutera aussi
+le sol (<em>ground</em>) avec la même couleur du soleil, ce
+qui nous rendra possible la délimitation de la zone derrière laquelle
+le soleil est censé se coucher.<br>
+<br>
+<br>
+<br>
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Square&nbsp;ground;</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#000000">ground&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Square</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ground.makeVisible</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ground.changeColor</font><font color="#000000">(</font><font color="#2a00ff">"blue"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ground.changeSize</font><font color="#000000">(</font><font color="#990000">320</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ground.moveVertical</font><font color="#000000">(</font><font color="#990000">180</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">ground.moveHorizontal</font><font color="#000000">(</font><font color="#000000">-</font><font color="#990000">70</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#ffffff">&nbsp;</font><br>
+<font color="#3f5fbf">/**</font><br>
+<font color="#3f5fbf">*&nbsp;Make&nbsp;the&nbsp;blue&nbsp;sun&nbsp;set</font><br>
+<font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">sunset</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun.slowMoveVertical</font><font color="#000000">(</font><font color="#990000">180</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#000000">sun.makeInvisible</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#000000"><br>
+}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; Et voici la séquence correspondante au
+nouveau dessin qui se crée une fois la méthode "sunset" ajoutée à la
+fin de la méthode "draw":<br>
+<br>
+<br>
+<br>
+<div style="text-align: center;">&nbsp;<br>
+&nbsp;&nbsp;<img style="width: 303px; height: 301px;" alt="" src="images/2_3.png">&nbsp;&nbsp; <img style="width: 301px; height: 301px;" alt="" src="images/2_4.png"><br>
+</div>
+<br>
+<br>
+<br>
+<span style="font-weight: bold;"><br>
+Code-source et documentation:<br>
+</span>
+<ul>
+<li><small><a target="_blank" href="tp1_c6.html"><span style="font-style: italic; text-decoration: underline;">Classe
+Picture</span></a><a target="_blank" href="tp1_c6.html"><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span></a>
+&nbsp;(<a target="_blank" href="tp1_c5.html">DOC</a>)</small></li>
+</ul>
+<br>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<br>
+</div>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --></div>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --></div>
+<hr>
+<h3>Question 3 :</h3>
+<br>
+<div style="margin-left: 40px;"><br>
+<span style="font-weight: bold;">3.3</span>&nbsp;&nbsp;
+Pour completer le code manquant des méthodes <em>nom(), prenom()
+et matricule()</em> on a juste reajouté le bout code qui permet
+de renvoyer chaque valeur associée au champs de l'objet <span style="font-style: italic;">AuditeurCNAM</span> créé:<br>
+</div>
+<br>
+<div style="margin-left: 40px;">
+<div style="text-align: center;">
+
+
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Lecture&nbsp;du&nbsp;nom&nbsp;de&nbsp;l'auditeur.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">son&nbsp;nom</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;nom</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;this</b></font><font color="#000000">.nom;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Lecture&nbsp;du&nbsp;prénom&nbsp;de&nbsp;l'auditeur.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">son&nbsp;prénom</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;prenom</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;this</b></font><font color="#000000">.prenom;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Lecture&nbsp;du&nbsp;matricule&nbsp;de&nbsp;l'auditeur.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">son&nbsp;matricule</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;matricule</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;this</b></font><font color="#000000">.matricule;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+</div>
+<p>&nbsp;&nbsp;&nbsp; Dans le cas de la méthode <span style="font-style: italic;">login()</span>, une autre
+auxiliaire <span style="font-style: italic;">sansAccents</span>()
+a été créée avant dans le but de identifier n'importe quelle voyelle
+des chaînes "nom" et "prenom" dont on aura besoin lors de la création
+du login:</p>
+<br>
+<div style="text-align: center;">
+
+
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#ffffff">&nbsp;</font><font color="#3f5fbf">/**&nbsp;Retourne&nbsp;une&nbsp;chaîne&nbsp;en&nbsp;remplaçant&nbsp;les&nbsp;caractères&nbsp;accentués&nbsp;par&nbsp;les&nbsp;caractères&nbsp;non-accentués&nbsp;correspondants.</font><br>
+<font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">s&nbsp;la&nbsp;chaîne&nbsp;accentuée&nbsp;initiale</font><br>
+<font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">la&nbsp;chaîne&nbsp;non&nbsp;accentuée</font><br>
+<font color="#3f5fbf">*/</font><br>
+<font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;sansAccents</font><font color="#000000">(</font><font color="#000000">String&nbsp;s</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;sAccents&nbsp;=&nbsp;</font><font color="#2a00ff">"äâàáåãéèëêòóôõöøìíîïùúûüýñçÿÄÂÀÁÅÃÉÈËÊÒÓÔÕÖØÌÍÎÏÙÚÛÜÝÑÇÝ"</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;sSansAccents&nbsp;=</font><font color="#2a00ff">"aaaaaaeeeeooooooiiiiuuuuyncyaaaaaaeeeeooooooiiiiuuuuyncy"</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">longueur&nbsp;=&nbsp;sAccents.length</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">i=</font><font color="#990000">0</font><font color="#000000">;i&lt;longueur;i++</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">s&nbsp;=&nbsp;s.replace</font><font color="#000000">(</font><font color="#000000">sAccents.charAt</font><font color="#000000">(</font><font color="#000000">i</font><font color="#000000">)</font><font color="#000000">,sSansAccents.charAt</font><font color="#000000">(</font><font color="#000000">i</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">s;</font><br>
+<font color="#000000">}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; Et voici le code pour la méthode <span style="font-style: italic;">login()</span>, laquelle
+fait appel à plusieurs méthodes des librairies de Java telles que
+&nbsp;<span style="font-style: italic;">replaceAll(),
+toLowerCase(), substring(), replaceAll() ou Math.min(), </span>de
+la même façon que l'on s'en serve de <span style="font-style: italic;">sansAccents()</span>.<br>
+<br>
+<br>
+<br>
+<div style="text-align: center;">
+
+
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code><font color="#ffffff">&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;le&nbsp;login&nbsp;au&nbsp;Cnam&nbsp;:&nbsp;6&nbsp;premières&nbsp;lettres&nbsp;du&nbsp;nom&nbsp;suivies&nbsp;de&nbsp;la&nbsp;première</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;lettre&nbsp;du&nbsp;prénom&nbsp;séparées&nbsp;de&nbsp;'_'&nbsp;.&nbsp;le&nbsp;login&nbsp;retourné&nbsp;est&nbsp;en&nbsp;minuscules,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;le&nbsp;trait&nbsp;d'union,&nbsp;ou&nbsp;spéciaux&nbsp;</font><font color="#7f7f9f">&lt;i&gt;</font><font color="#3f5fbf">(pour&nbsp;unix)</font><font color="#7f7f9f">&lt;/i&gt;&nbsp;</font><font color="#3f5fbf">sont&nbsp;remplacés&nbsp;par&nbsp;des</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;'_'&nbsp;pas&nbsp;de&nbsp;caractères&nbsp;accentués&nbsp;pour&nbsp;le&nbsp;login&nbsp;voir&nbsp;les&nbsp;classes</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;prédéfines,&nbsp;java.lang.String&nbsp;:&nbsp;les&nbsp;méthodes&nbsp;replaceAll,&nbsp;toLowerCase&nbsp;et</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;substring&nbsp;java.lang.Math&nbsp;:&nbsp;la&nbsp;méthode&nbsp;min</font><font color="#7f7f9f">&lt;br&gt;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f7f9f">&lt;b&gt;</font><font color="#3f5fbf">BlueJ&nbsp;:&nbsp;Menu&nbsp;Aide</font><font color="#7f7f9f">&lt;/b&gt;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">le&nbsp;login&nbsp;du&nbsp;Cnam&nbsp;simplifié,&nbsp;sans&nbsp;les&nbsp;adaptations&nbsp;dues&nbsp;aux</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;homonymes...</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">String&nbsp;login</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;nomL;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">String&nbsp;prenomL;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">nomL=</font><font color="#7f0055"><b>this</b></font><font color="#000000">.nom</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">nomL=nomL.replaceAll</font><font color="#000000">(</font><font color="#2a00ff">"[0-9]"</font><font color="#000000">,</font><font color="#2a00ff">""</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">nomL=sansAccents</font><font color="#000000">(</font><font color="#000000">nomL</font><font color="#000000">)</font><font color="#000000">.toLowerCase</font><font color="#000000">()</font><font color="#000000">.substring</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;Math.min</font><font color="#000000">(</font><font color="#000000">nomL.length</font><font color="#000000">()</font><font color="#000000">,</font><font color="#990000">6</font><font color="#000000">))</font><font color="#000000">.replaceAll</font><font color="#000000">(</font><font color="#2a00ff">"[^a-z]"</font><font color="#000000">,</font><font color="#2a00ff">"_"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">prenomL=</font><font color="#7f0055"><b>this</b></font><font color="#000000">.prenom</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">prenomL=prenomL.replaceAll</font><font color="#000000">(</font><font color="#2a00ff">"[0-9]"</font><font color="#000000">,</font><font color="#2a00ff">""</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">prenomL=sansAccents</font><font color="#000000">(</font><font color="#000000">prenomL</font><font color="#000000">)</font><font color="#000000">.toLowerCase</font><font color="#000000">()</font><font color="#000000">.substring</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,</font><font color="#990000">1</font><font color="#000000">)</font><font color="#000000">.replaceAll</font><font color="#000000">(</font><font color="#2a00ff">"[^a-z]"</font><font color="#000000">,</font><font color="#2a00ff">"_"</font><font color="#000000">)</font><font color="#000000">;&nbsp;&nbsp;&nbsp;</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">nomL+</font><font color="#2a00ff">"_"</font><font color="#000000">+prenomL;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+<br>
+<br>
+<div style="text-align: left;"><span style="font-weight: bold;">3.4&nbsp;&nbsp;&nbsp;
+</span>Deux nouvelles instances&nbsp;ont été créées à partir
+de la classe <span style="font-style: italic;">AuditeurCNAM</span>
+et ensuite inspectées:<br>
+<br>
+<br>
+<div style="text-align: center;"><img style="width: 372px; height: 245px;" alt="" src="images/3.png">&nbsp; &nbsp;<img style="width: 372px; height: 245px;" alt="" src="images/3_1.png"><br>
+<br>
+<br>
+<br>
+<div style="text-align: left;"><span style="font-weight: bold;">3.5 et
+3.6&nbsp;&nbsp;&nbsp; </span>Après une vérification
+de la correcte exécution des test unitaires proposés...<br>
+<br>
+<br>
+<div style="text-align: center;"><img style="width: 378px; height: 376px;" alt="" src="images/3_2.png"><br>
+<br>
+<div style="text-align: left;">... on a créé nos propres
+test "testCheck_1" et "testCheck_nom_prenom_matricule_charact_spec" qui
+permet de mettre en pratique la création des mes propres test
+unitaires pour constater que la création du login et le remplacement
+des caractères spéciaux se font correctement:<br>
+<br>
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top"><code>
+<font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck_1</font><font color="#000000">()</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur3&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Paul"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"Presté"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12-653"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Paul&nbsp;Presté&nbsp;login&nbsp;:&nbsp;paul_p"</font><font color="#000000">,&nbsp;auditeur3.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck_nom_prenom_matricule_charact_spec</font><font color="#000000">()</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur2&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Ératon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"^EæTÉO"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"24556Af"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Ératon"</font><font color="#000000">,&nbsp;auditeur2.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"^EæTÉO"</font><font color="#000000">,&nbsp;auditeur2.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"24556Af"</font><font color="#000000">,&nbsp;auditeur2.matricule</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Ératon&nbsp;^EæTÉO&nbsp;login&nbsp;:&nbsp;eraton__"</font><font color="#000000">,&nbsp;auditeur2.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"eraton__"</font><font color="#000000">,&nbsp;auditeur2.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="text-align: left;"><br>&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <span style="font-weight: bold;">
+Code-source et documentation:<br>
+</span>
+<ul><ul><ul><li><small><a target="_blank" href="tp1_c7.html"><span style="font-style: italic; text-decoration: underline;">Classe AuditeurCNAM</span></a><a target="_blank" href="tp1_c7.html">
+</a>&nbsp;(<a target="_blank" href="tp1_c5.html">DOC</a>)</small></li><li><small><a target="_blank" href="tp1_c8.html"><span style="font-style: italic; text-decoration: underline;">Classe AuditeurCNAMTest</span></a><a target="_blank" href="tp1_c8.html"><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span><span style="font-style: italic; text-decoration: underline;"></span></a><a target="_blank" href="tp1_c8.html">
+</a>&nbsp;(<a target="_blank" href="tp1_c5.html">DOC</a>)</small></li></ul></ul></ul>
+</div>
+<hr>
+<h3>Conclusion</h3>
+<i style="font-size: 12px;">&nbsp;&nbsp;&nbsp; </i><span style="font-size: 12px;">Ce
+premier travail pratique m'a permis de me familiariser avec BlueJ et
+la lecture en simultanée des ouvrages conseillés pour complémenter cet
+étude (notamment les guides d'introduction avec le langage JAVA) m'ont
+permis de m'approcher aux premières notions de la programmation
+orientée&nbsp;objets.<br></span><i style="font-size: 12px;"><br></i><h3>Biliographie</h3><a href="http://lmi92.cnam.fr/progAvancee/exemple_de_rapport/2011/objects-first-ch1.pdf"><em></em></a><ul><li><a href="http://www.bluej.org/tutorial/tutorial-201.pdf">The BlueJ Tutorial</a></li><li><a href="http://www.bluej.org/tutorial/testing-tutorial.pdf">Unit Testing in BlueJ</a></li><li><a href="http://download.oracle.com/javase/7/docs/api/">Documentation (en) sur les classes et méthodes Java</a></li><li><a href="http://jfod.cnam.fr/NFP121/12-ER/NFP121_12_007_ER-2.pdf">La partie de ce cours sur les ER</a></li><li><a href="http://docs.oracle.com/javase/6/docs/api/index.html" target="_blank">Documentation officiel d'Oracle</a></li></ul>
+</body></html>

@@ -9,6 +9,7 @@ public class TestPolyReg {
 		PolygoneRegulier p2 = new PolygoneRegulier (5,100);
 		PolygoneRegulier p3 = new PolygoneRegulier (4,100);
 		
+		
 		System.out.println("Poly p1 = " + p1.toString());
 		System.out.println("Poly p2 = " + p2); // appel implicite de toString()
 		
@@ -24,9 +25,7 @@ public class TestPolyReg {
 		System.out.println(" p1 == p3 : " + p1.equals(p3));		
 		System.out.println(" o1 == o3 : " + b1);
 		System.out.println(" p1 == p3 : " + b2);
-		
-
-		
+				
 	}
 
 }

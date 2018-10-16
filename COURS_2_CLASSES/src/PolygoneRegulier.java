@@ -4,11 +4,16 @@ public class PolygoneRegulier extends Object{
 
 	private int nbCotes;
 	private int longCote;
+	private Position pos;
 	
 	PolygoneRegulier(int nCotes, int lngCote){ // Constructeur
 	
 		this.nbCotes = nCotes;
 		this.longCote = lngCote;
+		
+		pos = new Position(0,0);
+		//pos = this.new Position(0,0);
+		
 	}
 		
 	public String toString(){
@@ -29,6 +34,16 @@ public class PolygoneRegulier extends Object{
 	 poly.nbCotes == this.nbCotes &&
 	poly.longCote == longCote;
 	}
+		
+	
+	private class Position{		
+		private int x,y;		
+		Position(int x, int y){
+			this.x = x; this.y = y;
+		}
+	}
+	
+
 
 	
 }
