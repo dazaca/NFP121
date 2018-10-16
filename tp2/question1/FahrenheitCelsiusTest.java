@@ -71,4 +71,12 @@ public class FahrenheitCelsiusTest extends junit.framework.TestCase {
 		assertEquals("   54 °F -> 12.2 °C ?", 12.2, question1.FahrenheitCelsius.fahrenheitEnCelsius(54), 0.1);
 	}
 	
+	
+	
+	
+	public void testCheck() {
+		assertEquals("    32 °F -> 0.0 °C ? ", 0.0, question1.FahrenheitCelsius.fahrenheitEnCelsius(32), 0.1);
+
+	}
+	
 }

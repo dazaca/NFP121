@@ -16,7 +16,16 @@ public class FahrenheitCelsius{
       */
      public static void main(String[] args){
        try{
-       
+       // pour tous les paramètres de la ligne de commande
+        int fahrenheit = 0;     // Pour la sauvegarde la valeur passée des degrés fahrenheit par l'utilisateur et l'utiliser dans la méthode qui la transformera en la valeur celsius.
+        float celsius = 0;      // Pour la sauvegarde de la valeur obtenu à partir de la conversion faite par notre méthode.
+               
+        for (String Arg : args) {
+            fahrenheit = Integer.parseInt(Arg);
+            celsius = fahrenheitEnCelsius(fahrenheit); // On passe la valeur du champ fahrenheit à la méthode de conversion, puis on assigne la valeur retournée par cette méthode au champ celsius.
+            java.text.DecimalFormat df = new java.text.DecimalFormat("#.#");
+            System.out.println(fahrenheit + "\u00B0F -> " + df.format(celsius) + "\u00B0C");
+        }  
       
        }catch(NumberFormatException nfe){
            System.out.println("error : " + nfe.getMessage());  // en cas d'erreur 
@@ -24,15 +33,21 @@ public class FahrenheitCelsius{
        
      }
      
-     /** 
-      * la méthode à compléter. 
-      *   @param f la valeur en degré Fahrenheit
-      *   @return  la conversion en degré Celsius
-      */
-     public static float fahrenheitEnCelsius( int f){
-       // ...
-       return 0.F;	// à compléter	en remplaçant la valeur retournée par la fonction de conversion
-       // ...
-     }
+     /**
+     * la méthode à compléter.
+     * 
+     * @param f
+     *            la valeur en degré Fahrenheit
+     * @return la conversion en degré Celsius
+     */
+    public static float fahrenheitEnCelsius(int f) {
+
+        float c; 
+        float div;              
+        div = (float)5/9; 
+        c =  (div * (f-32));
+        return  c;
+
+    }
 
 }
