@@ -1,0 +1,31 @@
+// java.lang.string
+
+String 	replaceAll(String regex, String replacement)
+          Replaces each substring of this string that matches the given regular expression with the given replacement.
+
+  String 	toLowerCase()
+          Converts all of the characters in this String to lower case using the rules of the default locale.
+
+
+ String 	toLowerCase(Locale locale)
+          Converts all of the characters in this String to lower case using the rules of the given Locale.
+
+
+  String 	substring(int beginIndex)
+          Returns a new string that is a substring of this string.
+
+
+ String 	substring(int beginIndex, int endIndex)
+          Returns a new string that is a substring of this string.
+
+// java.lang.Math
+
+
+ static double 	min(double a, double b)
+          Returns the smaller of two double values.
+
+static float 	min(float a, float b)
+          Returns the smaller of two float values.
+
+static int 	min(int a, int b)
+          Returns the smaller of two int values.

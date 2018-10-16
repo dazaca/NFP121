@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>tp1_c1</title>
+
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head><body>
+<br>
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody><tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top">
+<code>
+<font color="#7f0055"><b>package&nbsp;</b></font><font color="#000000">question1;</font><br>
+<br>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">javax.swing.*;</font><br>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.awt.*;</font><br>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.List;</font><br>
+<font color="#7f0055"><b>import&nbsp;</b></font><font color="#000000">java.util.*;</font><br>
+<br>
+<font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Canvas&nbsp;is&nbsp;a&nbsp;class&nbsp;to&nbsp;allow&nbsp;for&nbsp;simple&nbsp;graphical&nbsp;drawing&nbsp;on&nbsp;a&nbsp;canvas.&nbsp;This&nbsp;is</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;a&nbsp;modification&nbsp;of&nbsp;the&nbsp;general&nbsp;purpose&nbsp;Canvas,&nbsp;specially&nbsp;made&nbsp;for&nbsp;the&nbsp;BlueJ</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;"shapes"&nbsp;example.</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author</font><font color="#3f5fbf">:&nbsp;Bruce&nbsp;Quig</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author</font><font color="#3f5fbf">:&nbsp;Michael&nbsp;Kolling&nbsp;(mik)</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@version</font><font color="#3f5fbf">:&nbsp;1.6&nbsp;(shapes)</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">Canvas&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Note:&nbsp;The&nbsp;implementation&nbsp;of&nbsp;this&nbsp;class&nbsp;(specifically&nbsp;the&nbsp;handling&nbsp;of</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;shape&nbsp;identity&nbsp;and&nbsp;colors)&nbsp;is&nbsp;slightly&nbsp;more&nbsp;complex&nbsp;than&nbsp;necessary.&nbsp;This</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;is&nbsp;done&nbsp;on&nbsp;purpose&nbsp;to&nbsp;keep&nbsp;the&nbsp;interface&nbsp;and&nbsp;instance&nbsp;fields&nbsp;of&nbsp;the</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;shape&nbsp;objects&nbsp;in&nbsp;this&nbsp;project&nbsp;clean&nbsp;and&nbsp;simple&nbsp;for&nbsp;educational&nbsp;purposes.</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;static&nbsp;</b></font><font color="#000000">Canvas&nbsp;canvasSingleton;</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Factory&nbsp;method&nbsp;to&nbsp;get&nbsp;the&nbsp;canvas&nbsp;singleton&nbsp;object.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#000000">Canvas&nbsp;getCanvas</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">canvasSingleton&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvasSingleton&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Canvas</font><font color="#000000">(</font><font color="#2a00ff">"BlueJ&nbsp;Shapes&nbsp;Demo"</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">,&nbsp;</font><font color="#990000">300</font><font color="#000000">,&nbsp;Color.white</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvasSingleton.setVisible</font><font color="#000000">(</font><font color="#7f0055"><b>true</b></font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>return&nbsp;</b></font><font color="#000000">canvasSingleton;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;-----&nbsp;instance&nbsp;part&nbsp;-----</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">JFrame&nbsp;frame;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">CanvasPane&nbsp;canvas;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Graphics2D&nbsp;graphic;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Color&nbsp;backgroundColour;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Image&nbsp;canvasImage;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">List&lt;Object&gt;&nbsp;objects;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">HashMap&lt;Object,&nbsp;ShapeDescription&gt;&nbsp;shapes;</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Create&nbsp;a&nbsp;Canvas.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">title</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title&nbsp;to&nbsp;appear&nbsp;in&nbsp;Canvas&nbsp;Frame</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">width</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;desired&nbsp;width&nbsp;for&nbsp;the&nbsp;canvas</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">height</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;desired&nbsp;height&nbsp;for&nbsp;the&nbsp;canvas</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">bgClour</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;desired&nbsp;background&nbsp;colour&nbsp;of&nbsp;the&nbsp;canvas</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Canvas</font><font color="#000000">(</font><font color="#000000">String&nbsp;title,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">width,&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">height,&nbsp;Color&nbsp;bgColour</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">JFrame</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvas&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">CanvasPane</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame.setContentPane</font><font color="#000000">(</font><font color="#000000">canvas</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame.setTitle</font><font color="#000000">(</font><font color="#000000">title</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvas.setPreferredSize</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Dimension</font><font color="#000000">(</font><font color="#000000">width,&nbsp;height</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">backgroundColour&nbsp;=&nbsp;bgColour;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame.pack</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">objects&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">ArrayList&lt;Object&gt;</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">shapes&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">HashMap&lt;Object,&nbsp;ShapeDescription&gt;</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Set&nbsp;the&nbsp;canvas&nbsp;visibility&nbsp;and&nbsp;brings&nbsp;canvas&nbsp;to&nbsp;the&nbsp;front&nbsp;of&nbsp;screen&nbsp;when</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;made&nbsp;visible.&nbsp;This&nbsp;method&nbsp;can&nbsp;also&nbsp;be&nbsp;used&nbsp;to&nbsp;bring&nbsp;an&nbsp;already&nbsp;visible</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;canvas&nbsp;to&nbsp;the&nbsp;front&nbsp;of&nbsp;other&nbsp;windows.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">visible</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boolean&nbsp;value&nbsp;representing&nbsp;the&nbsp;desired&nbsp;visibility&nbsp;of&nbsp;the</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;canvas&nbsp;(true&nbsp;or&nbsp;false)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setVisible</font><font color="#000000">(</font><font color="#7f0055"><b>boolean&nbsp;</b></font><font color="#000000">visible</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">graphic&nbsp;==&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;first&nbsp;time:&nbsp;instantiate&nbsp;the&nbsp;offscreen&nbsp;image&nbsp;and&nbsp;fill&nbsp;it&nbsp;with</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;the&nbsp;background&nbsp;colour</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Dimension&nbsp;size&nbsp;=&nbsp;canvas.getSize</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvasImage&nbsp;=&nbsp;canvas.createImage</font><font color="#000000">(</font><font color="#000000">size.width,&nbsp;size.height</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#000000">Graphics2D</font><font color="#000000">)&nbsp;</font><font color="#000000">canvasImage.getGraphics</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">backgroundColour</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.fillRect</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">0</font><font color="#000000">,&nbsp;size.width,&nbsp;size.height</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.black</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">frame.setVisible</font><font color="#000000">(</font><font color="#000000">visible</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Draw&nbsp;a&nbsp;given&nbsp;shape&nbsp;onto&nbsp;the&nbsp;canvas.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">referenceObject</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;an&nbsp;object&nbsp;to&nbsp;define&nbsp;identity&nbsp;for&nbsp;this&nbsp;shape</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">color</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;color&nbsp;of&nbsp;the&nbsp;shape</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">shape</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;shape&nbsp;object&nbsp;to&nbsp;be&nbsp;drawn&nbsp;on&nbsp;the&nbsp;canvas</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Note:&nbsp;this&nbsp;is&nbsp;a&nbsp;slightly&nbsp;backwards&nbsp;way&nbsp;of&nbsp;maintaining&nbsp;the&nbsp;shape</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;objects.&nbsp;It&nbsp;is&nbsp;carefully&nbsp;designed&nbsp;to&nbsp;keep&nbsp;the&nbsp;visible&nbsp;shape&nbsp;interfaces</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;in&nbsp;this&nbsp;project&nbsp;clean&nbsp;and&nbsp;simple&nbsp;for&nbsp;educational&nbsp;purposes.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">draw</font><font color="#000000">(</font><font color="#000000">Object&nbsp;referenceObject,&nbsp;String&nbsp;color,&nbsp;Shape&nbsp;shape</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">objects.remove</font><font color="#000000">(</font><font color="#000000">referenceObject</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;just&nbsp;in&nbsp;case&nbsp;it&nbsp;was&nbsp;already&nbsp;there</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">objects.add</font><font color="#000000">(</font><font color="#000000">referenceObject</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;add&nbsp;at&nbsp;the&nbsp;end</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">shapes.put</font><font color="#000000">(</font><font color="#000000">referenceObject,&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">ShapeDescription</font><font color="#000000">(</font><font color="#000000">shape,&nbsp;color</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">redraw</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Erase&nbsp;a&nbsp;given&nbsp;shape's&nbsp;from&nbsp;the&nbsp;screen.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">referenceObject</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;shape&nbsp;object&nbsp;to&nbsp;be&nbsp;erased</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">erase</font><font color="#000000">(</font><font color="#000000">Object&nbsp;referenceObject</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">objects.remove</font><font color="#000000">(</font><font color="#000000">referenceObject</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;just&nbsp;in&nbsp;case&nbsp;it&nbsp;was&nbsp;already&nbsp;there</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">shapes.remove</font><font color="#000000">(</font><font color="#000000">referenceObject</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">redraw</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Set&nbsp;the&nbsp;foreground&nbsp;colour&nbsp;of&nbsp;the&nbsp;Canvas.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">newColour</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;new&nbsp;colour&nbsp;for&nbsp;the&nbsp;foreground&nbsp;of&nbsp;the&nbsp;Canvas</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setForegroundColor</font><font color="#000000">(</font><font color="#000000">String&nbsp;colorString</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"red"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.red</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"black"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.black</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"blue"</font><font color="#000000">))&nbsp;&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.blue</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"yellow"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.yellow</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"green"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.green</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"magenta"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.magenta</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;if&nbsp;</b></font><font color="#000000">(</font><font color="#000000">colorString.equals</font><font color="#000000">(</font><font color="#2a00ff">"white"</font><font color="#000000">))&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.white</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>else&nbsp;</b></font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">Color.black</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Wait&nbsp;for&nbsp;a&nbsp;specified&nbsp;number&nbsp;of&nbsp;milliseconds&nbsp;before&nbsp;finishing.&nbsp;This</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;provides&nbsp;an&nbsp;easy&nbsp;way&nbsp;to&nbsp;specify&nbsp;a&nbsp;small&nbsp;delay&nbsp;which&nbsp;can&nbsp;be&nbsp;used&nbsp;when</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;producing&nbsp;animations.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">milliseconds</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the&nbsp;number</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">wait</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">milliseconds</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try&nbsp;</b></font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Thread.sleep</font><font color="#000000">(</font><font color="#000000">milliseconds</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;</font><font color="#7f0055"><b>catch&nbsp;</b></font><font color="#000000">(</font><font color="#000000">Exception&nbsp;e</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;ignoring&nbsp;exception&nbsp;at&nbsp;the&nbsp;moment</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Redraw&nbsp;ell&nbsp;shapes&nbsp;currently&nbsp;on&nbsp;the&nbsp;Canvas.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">redraw</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">erase</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">Iterator&nbsp;i&nbsp;=&nbsp;objects.iterator</font><font color="#000000">()</font><font color="#000000">;&nbsp;i.hasNext</font><font color="#000000">()</font><font color="#000000">;</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">((</font><font color="#000000">ShapeDescription</font><font color="#000000">)&nbsp;</font><font color="#000000">shapes.get</font><font color="#000000">(</font><font color="#000000">i.next</font><font color="#000000">()))</font><font color="#000000">.draw</font><font color="#000000">(</font><font color="#000000">graphic</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">canvas.repaint</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Erase&nbsp;the&nbsp;whole&nbsp;canvas.&nbsp;(Does&nbsp;not&nbsp;repaint.)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">erase</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Color&nbsp;original&nbsp;=&nbsp;graphic.getColor</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">backgroundColour</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">Dimension&nbsp;size&nbsp;=&nbsp;canvas.getSize</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.fill</font><font color="#000000">(</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">Rectangle</font><font color="#000000">(</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">0</font><font color="#000000">,&nbsp;size.width,&nbsp;size.height</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.setColor</font><font color="#000000">(</font><font color="#000000">original</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/************************************************************************</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Inner&nbsp;class&nbsp;CanvasPane&nbsp;-&nbsp;the&nbsp;actual&nbsp;canvas&nbsp;component&nbsp;contained&nbsp;in&nbsp;the</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Canvas&nbsp;frame.&nbsp;This&nbsp;is&nbsp;essentially&nbsp;a&nbsp;JPanel&nbsp;with&nbsp;added&nbsp;capability&nbsp;to</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;refresh&nbsp;the&nbsp;image&nbsp;drawn&nbsp;on&nbsp;it.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;class&nbsp;</b></font><font color="#000000">CanvasPane&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">JPanel&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">paint</font><font color="#000000">(</font><font color="#000000">Graphics&nbsp;g</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">g.drawImage</font><font color="#000000">(</font><font color="#000000">canvasImage,&nbsp;</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#990000">0</font><font color="#000000">,&nbsp;</font><font color="#7f0055"><b>null</b></font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/************************************************************************</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Inner&nbsp;class&nbsp;CanvasPane&nbsp;-&nbsp;the&nbsp;actual&nbsp;canvas&nbsp;component&nbsp;contained&nbsp;in&nbsp;the</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Canvas&nbsp;frame.&nbsp;This&nbsp;is&nbsp;essentially&nbsp;a&nbsp;JPanel&nbsp;with&nbsp;added&nbsp;capability&nbsp;to</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;refresh&nbsp;the&nbsp;image&nbsp;drawn&nbsp;on&nbsp;it.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;class&nbsp;</b></font><font color="#000000">ShapeDescription&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">Shape&nbsp;shape;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>private&nbsp;</b></font><font color="#000000">String&nbsp;colorString;</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">ShapeDescription</font><font color="#000000">(</font><font color="#000000">Shape&nbsp;shape,&nbsp;String&nbsp;color</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>this</b></font><font color="#000000">.shape&nbsp;=&nbsp;shape;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">colorString&nbsp;=&nbsp;color;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">draw</font><font color="#000000">(</font><font color="#000000">Graphics2D&nbsp;graphic</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">setForegroundColor</font><font color="#000000">(</font><font color="#000000">colorString</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">graphic.fill</font><font color="#000000">(</font><font color="#000000">shape</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#000000">}</font></code>
+</td>
+<!-- end source code -->
+</tr>
+<!-- start Java2Html link -->
+<tr>
+<td align="right">
+<small>
+<a href="http://www.java2html.de" target="_blank">Java2html</a>
+</small>
+</td>
+</tr>
+<!-- end Java2Html link -->
+</tbody></table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== -->
+</body></html>

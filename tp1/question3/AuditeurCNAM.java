@@ -27,9 +27,9 @@ public class AuditeurCNAM {
      *            sur la carte d'inscription, près de la photo
      */
     public AuditeurCNAM(String nom, String prenom, String matricule) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.matricule = matricule;
+            this.nom = nom;
+            this.prenom = prenom;
+            this.matricule = matricule;
     }
 
     /**
@@ -45,7 +45,16 @@ public class AuditeurCNAM {
      *         homonymes...
      */
     public String login() {
-        return "";// à compléter
+            String nomL;
+            String prenomL;
+            nomL=this.nom();
+            nomL=nomL.replaceAll("[0-9]","");
+            nomL=sansAccents(nomL).toLowerCase().substring(0, Math.min(nomL.length(),6)).replaceAll("[^a-z]","_");
+            prenomL=this.prenom();
+            prenomL=prenomL.replaceAll("[0-9]","");
+            prenomL=sansAccents(prenomL).toLowerCase().substring(0,1).replaceAll("[^a-z]","_");   
+
+            return nomL+"_"+prenomL;
     }
 
     /**
@@ -54,7 +63,7 @@ public class AuditeurCNAM {
      * @return son nom
      */
     public String nom() {
-        return null;// à compléter
+        return this.nom;
     }
 
     /**
@@ -63,7 +72,7 @@ public class AuditeurCNAM {
      * @return son prénom
      */
     public String prenom() {
-        return null;// à compléter
+        return this.prenom;
     }
 
     /**
@@ -72,7 +81,7 @@ public class AuditeurCNAM {
      * @return son matricule
      */
     public String matricule() {
-        return null;// à compléter
+        return this.matricule;
     }
 
     /**
@@ -86,5 +95,19 @@ public class AuditeurCNAM {
     public String toString() {
         return nom() + " " + prenom() + " login : " + login();
     }
+    
+    /** Retourne une chaîne en remplaçant les caractères accentués par les caractères non-accentués correspondants.
+* @param s la chaîne accentuée initiale
+* @return la chaîne non accentuée
+*/
+public String sansAccents(String s) {
+        String sAccents = "äâàáåãéèëêòóôõöøìíîïùúûüıñçÿÄÂÀÁÅÃÉÈËÊÒÓÔÕÖØÌÍÎÏÙÚÛÜİÑÇİ";
+        String sSansAccents ="aaaaaaeeeeooooooiiiiuuuuyncyaaaaaaeeeeooooooiiiiuuuuyncy";
+        int longueur = sAccents.length();
+        for (int i=0;i<longueur;i++) {
+            s = s.replace(sAccents.charAt(i),sSansAccents.charAt(i));
+        }
+        return s;
+}
 
 }

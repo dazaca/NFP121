@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<style type="text/css">
+td.java, td.java-ln {vertical-align:top;}
+tt.java, tt.java-ln, pre.java, pre.java-ln {line-height:1em; margin-bottom:0em;}
+td.java-ln { text-align:right; }
+tt.java-ln, pre.java-ln { color:#888888 }
+/* Background       */ span.java0  { font-size: 10pt; color:#ffffff; }
+/* Line numbers       */ span.java1  { font-size: 10pt; color:#808080; }
+/* Multi-line comments       */ span.java2  { font-size: 10pt; color:#3f7f5f; }
+/* Single-line comments       */ span.java3  { font-size: 10pt; color:#3f7f5f; }
+/* Keywords       */ span.java4  { font-size: 10pt; color:#7f0055; font-weight:bold; }
+/* Strings       */ span.java5  { font-size: 10pt; color:#2a00ff; }
+/* Character constants       */ span.java6  { font-size: 10pt; color:#990000; }
+/* Numeric constants       */ span.java7  { font-size: 10pt; color:#990000; }
+/* Parenthesis       */ span.java8  { font-size: 10pt; color:#000000; }
+/* Primitive Types       */ span.java9  { font-size: 10pt; color:#7f0055; font-weight:bold; }
+/* Others       */ span.java10  { font-size: 10pt; color:#000000; }
+/* Javadoc keywords       */ span.java11  { font-size: 10pt; color:#7f9fbf; }
+/* Javadoc HTML tags       */ span.java12  { font-size: 10pt; color:#7f7f9f; }
+/* Javadoc links       */ span.java13  { font-size: 10pt; color:#3f3fbf; }
+/* Javadoc others       */ span.java14  { font-size: 10pt; color:#3f5fbf; }
+/* Undefined       */ span.java15  { font-size: 10pt; color:#ff6100; }
+/* Annotation       */ span.java16  { font-size: 10pt; color:#646464; }
+</style>
+<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+<title>Classe Square</title>
+</head>
+<body>
+<div class="java"><code class="java"><span class="java4">package </span><span class="java10">question1;<br />
+<br />
+</span><span class="java4">import </span><span class="java10">java.awt.*;<br />
+<br />
+</span><span class="java14">/**<br />
+ * A square that can be manipulated and that draws itself on a canvas.<br />
+ * <br />
+ * </span><span class="java11">@author&#xA0; </span><span class="java14">Michael Kolling and David J. Barnes<br />
+ * </span><span class="java11">@version </span><span class="java14">1.0&#xA0; (15 July 2000)<br />
+ */<br />
+<br />
+</span><span class="java4">public class </span><span class="java10">Square<br />
+</span><span class="java8">{<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/** Taille. */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">int </span><span class="java10">size;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/** Position horizontale. */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">int </span><span class="java10">xPosition;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/** Position verticale. */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">int </span><span class="java10">yPosition;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/** Couleur. */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java10">String color;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/** Bool&eacute;en de visibilit&eacute;. */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">boolean </span><span class="java10">isVisible;<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Create a new square at default position with default color.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java10">Square</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">size = </span><span class="java7">30</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; xPosition = </span><span class="java7">60</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; yPosition = </span><span class="java7">50</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; color = </span><span class="java5">&#34;red&#34;</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; isVisible = </span><span class="java4">false</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Make this square visible. If it was already visible, do nothing.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">makeVisible</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">isVisible = </span><span class="java4">true</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; <br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Make this square invisible. If it was already invisible, do nothing.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">makeInvisible</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">erase</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; isVisible = </span><span class="java4">false</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; <br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square a few pixels to the right.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveRight</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">moveHorizontal</span><span class="java8">(</span><span class="java7">20</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square a few pixels to the left.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveLeft</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">moveHorizontal</span><span class="java8">(</span><span class="java10">-</span><span class="java7">20</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square a few pixels up.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveUp</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">moveVertical</span><span class="java8">(</span><span class="java10">-</span><span class="java7">20</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square a few pixels down.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveDown</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">moveVertical</span><span class="java8">(</span><span class="java7">20</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square horizontally by 'distance' pixels.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">distance distance en pixels<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveHorizontal</span><span class="java8">(</span><span class="java9">int </span><span class="java10">distance</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">erase</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; xPosition += distance;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Move the square vertically by 'distance' pixels.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">distance distance en pixels<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">moveVertical</span><span class="java8">(</span><span class="java9">int </span><span class="java10">distance</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">erase</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; yPosition += distance;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Slowly move the square horizontally by 'distance' pixels.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">distance distance en pixels<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">slowMoveHorizontal</span><span class="java8">(</span><span class="java9">int </span><span class="java10">distance</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java9">int </span><span class="java10">delta;<br />
+<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">if</span><span class="java8">(</span><span class="java10">distance &lt; </span><span class="java7">0</span><span class="java8">) <br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">delta = -</span><span class="java7">1</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; distance = -distance;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">else <br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">{<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">delta = </span><span class="java7">1</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">for</span><span class="java8">(</span><span class="java9">int </span><span class="java10">i = </span><span class="java7">0</span><span class="java10">; i &lt; distance; i++</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">xPosition += delta;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; }<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Slowly move the square vertically by 'distance' pixels.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">distance distance en pixels<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">slowMoveVertical</span><span class="java8">(</span><span class="java9">int </span><span class="java10">distance</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java9">int </span><span class="java10">delta;<br />
+<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">if</span><span class="java8">(</span><span class="java10">distance &lt; </span><span class="java7">0</span><span class="java8">) <br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">delta = -</span><span class="java7">1</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; distance = -distance;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">else <br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">{<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">delta = </span><span class="java7">1</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">for</span><span class="java8">(</span><span class="java9">int </span><span class="java10">i = </span><span class="java7">0</span><span class="java10">; i &lt; distance; i++</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">yPosition += delta;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; }<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Change the size to the new size (in pixels). Size must be &gt;= 0.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">newSize nouvelle taille<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">changeSize</span><span class="java8">(</span><span class="java9">int </span><span class="java10">newSize</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">erase</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; size = newSize;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Change the color. Valid colors are &#34;red&#34;, &#34;yellow&#34;, &#34;blue&#34;, &#34;green&#34;,<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * &#34;magenta&#34; and &#34;black&#34;.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * </span><span class="java11">@param </span><span class="java14">newColor nouvelle couleur<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">public </span><span class="java9">void </span><span class="java10">changeColor</span><span class="java8">(</span><span class="java10">String newColor</span><span class="java8">)<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">color = newColor;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; draw</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Draw the square with current specifications on screen.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">void </span><span class="java10">draw</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">if</span><span class="java8">(</span><span class="java10">isVisible</span><span class="java8">) {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">Canvas canvas = Canvas.getCanvas</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; canvas.draw</span><span class="java8">(</span><span class="java10">this, color,<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">new </span><span class="java10">Rectangle</span><span class="java8">(</span><span class="java10">xPosition, yPosition, size, size</span><span class="java8">))</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; canvas.wait</span><span class="java8">(</span><span class="java7">10</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; }<br />
+<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java14">/**<br />
+&#xA0;&#xA0;&#xA0;&#xA0; * Erase the square on screen.<br />
+&#xA0;&#xA0;&#xA0;&#xA0; */<br />
+&#xA0;&#xA0;&#xA0; </span><span class="java4">private </span><span class="java9">void </span><span class="java10">erase</span><span class="java8">()<br />
+&#xA0;&#xA0;&#xA0; {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java4">if</span><span class="java8">(</span><span class="java10">isVisible</span><span class="java8">) {<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java10">Canvas canvas = Canvas.getCanvas</span><span class="java8">()</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; canvas.erase</span><span class="java8">(</span><span class="java4">this</span><span class="java8">)</span><span class="java10">;<br />
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; </span><span class="java8">}<br />
+&#xA0;&#xA0;&#xA0; }<br />
+}</span></code></div></body>
+</html>

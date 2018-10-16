@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head><title>tp1_c7</title>
+
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head><body>
+<!-- ======================================================== --><!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+
+
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody><tr>
+<!-- start source code -->
+<td align="left" nowrap="nowrap" valign="top">
+<code>
+<font color="#7f0055"><b>package&nbsp;</b></font><font color="#000000">question3;</font><br>
+<br>
+<font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;Classe-test&nbsp;AuditeurCNAMTest.</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author&nbsp;</font><font color="#3f5fbf">(votre&nbsp;nom)</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@version&nbsp;</font><font color="#3f5fbf">(un&nbsp;numéro&nbsp;de&nbsp;version&nbsp;ou&nbsp;une&nbsp;date)</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les&nbsp;classes-test&nbsp;sont&nbsp;documentées&nbsp;ici&nbsp;:</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;et&nbsp;sont&nbsp;basées&nbsp;sur&nbsp;le&nbsp;document&nbsp;©&nbsp;2002&nbsp;Robert&nbsp;A.&nbsp;Ballance&nbsp;intitulé</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;«JUnit:&nbsp;Unit&nbsp;Testing&nbsp;Framework».</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les&nbsp;objets&nbsp;Test&nbsp;(et&nbsp;TestSuite)&nbsp;sont&nbsp;associés&nbsp;aux&nbsp;classes&nbsp;à&nbsp;tester</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;par&nbsp;la&nbsp;simple&nbsp;relation&nbsp;yyyTest&nbsp;(e.g.&nbsp;qu'un&nbsp;Test&nbsp;de&nbsp;la&nbsp;classe</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name.java&nbsp;se&nbsp;nommera&nbsp;NameTest.java);&nbsp;les&nbsp;deux&nbsp;se&nbsp;retrouvent&nbsp;dans&nbsp;le</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;même&nbsp;paquetage.&nbsp;Les&nbsp;"engagements"&nbsp;(anglais&nbsp;:&nbsp;"fixture")&nbsp;forment&nbsp;un</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ensemble&nbsp;de&nbsp;conditions&nbsp;qui&nbsp;sont&nbsp;vraies&nbsp;pour&nbsp;chaque&nbsp;méthode&nbsp;Test&nbsp;à</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exécuter.&nbsp;Il&nbsp;peut&nbsp;y&nbsp;avoir&nbsp;plus&nbsp;d'une&nbsp;méthode&nbsp;Test&nbsp;dans&nbsp;une&nbsp;classe</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Test;&nbsp;leur&nbsp;ensemble&nbsp;forme&nbsp;un&nbsp;objet&nbsp;TestSuite.&nbsp;BlueJ&nbsp;découvrira</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;automatiquement&nbsp;(par&nbsp;introspection)&nbsp;les&nbsp;méthodes&nbsp;Test&nbsp;de&nbsp;votre</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classe&nbsp;Test&nbsp;et&nbsp;générera&nbsp;la&nbsp;TestSuite&nbsp;conséquente.&nbsp;Chaque&nbsp;appel&nbsp;d'une</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;méthode&nbsp;Test&nbsp;sera&nbsp;précédé&nbsp;d'un&nbsp;appel&nbsp;de&nbsp;setUp(),&nbsp;qui&nbsp;réalise&nbsp;les</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;engagements,&nbsp;et&nbsp;suivi&nbsp;d'un&nbsp;appel&nbsp;à&nbsp;tearDown(),&nbsp;qui&nbsp;les&nbsp;détruit.</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">AuditeurCNAMTest&nbsp;</font><font color="#7f0055"><b>extends&nbsp;</b></font><font color="#000000">junit.framework.TestCase&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Définissez&nbsp;ici&nbsp;les&nbsp;variables&nbsp;d'instance&nbsp;nécessaires&nbsp;à&nbsp;vos&nbsp;engagements;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Vous&nbsp;pouvez&nbsp;également&nbsp;les&nbsp;saisir&nbsp;automatiquement&nbsp;du&nbsp;présentoir</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;à&nbsp;l'aide&nbsp;du&nbsp;menu&nbsp;contextuel&nbsp;"Présentoir&nbsp;--&gt;&nbsp;Engagements".</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Notez&nbsp;cependant&nbsp;que&nbsp;ce&nbsp;dernier&nbsp;ne&nbsp;peut&nbsp;saisir&nbsp;les&nbsp;objets&nbsp;primitifs</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;du&nbsp;présentoir&nbsp;(les&nbsp;objets&nbsp;sans&nbsp;constructeur,&nbsp;comme&nbsp;int,&nbsp;float,&nbsp;etc.).</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Constructeur&nbsp;de&nbsp;la&nbsp;classe-test&nbsp;AuditeurCNAMTest.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#000000">AuditeurCNAMTest</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Met&nbsp;en&nbsp;place&nbsp;les&nbsp;engagements.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Méthode&nbsp;appelée&nbsp;avant&nbsp;chaque&nbsp;appel&nbsp;de&nbsp;méthode&nbsp;de&nbsp;test.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>protected&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">setUp</font><font color="#000000">()&nbsp;</font><font color="#3f7f5f">//&nbsp;throws&nbsp;java.lang.Exception</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Initialisez&nbsp;ici&nbsp;vos&nbsp;engagements</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Supprime&nbsp;les&nbsp;engagements</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Méthode&nbsp;appelée&nbsp;après&nbsp;chaque&nbsp;appel&nbsp;de&nbsp;méthode&nbsp;de&nbsp;test.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>protected&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">tearDown</font><font color="#000000">()&nbsp;</font><font color="#3f7f5f">//&nbsp;throws&nbsp;java.lang.Exception</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Libérez&nbsp;ici&nbsp;les&nbsp;ressources&nbsp;engagées&nbsp;par&nbsp;setUp()</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">/*</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;Il&nbsp;ne&nbsp;vous&nbsp;reste&nbsp;plus&nbsp;qu'à&nbsp;définir&nbsp;une&nbsp;ou&nbsp;plusieurs&nbsp;méthodes&nbsp;de&nbsp;test.&nbsp;Ces</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;méthodes&nbsp;doivent&nbsp;vérifier&nbsp;les&nbsp;résultats&nbsp;attendus&nbsp;à&nbsp;l'aide&nbsp;d'assertions</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;assertTrue(&lt;boolean&gt;).&nbsp;Par&nbsp;convention,&nbsp;leurs&nbsp;noms&nbsp;devraient&nbsp;débuter&nbsp;par</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;"test".&nbsp;Vous&nbsp;pouvez&nbsp;ébaucher&nbsp;le&nbsp;corps&nbsp;grâce&nbsp;au&nbsp;menu&nbsp;contextuel</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*&nbsp;"Enregistrer&nbsp;une&nbsp;méthode&nbsp;de&nbsp;test".</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">*/</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;Un&nbsp;test&nbsp;de&nbsp;la&nbsp;méthode&nbsp;toString().&nbsp;*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_toString</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Dupont"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"paul"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"03-1234"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Dupont&nbsp;paul&nbsp;login&nbsp;:&nbsp;dupont_p"</font><font color="#000000">,&nbsp;auditeur1.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_court</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"paul"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"pierre"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"paul"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"pierre"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"paul_p"</font><font color="#000000">,&nbsp;auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_court_bis</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"thon"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"germon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;thon&nbsp;germon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"thon"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;thon&nbsp;germon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"germon"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;thon&nbsp;germon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"thon_g"</font><font color="#000000">,&nbsp;auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_avec_particule</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"le&nbsp;Thon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"alban"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;le&nbsp;Thon&nbsp;albacore&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"le&nbsp;Thon"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;le&nbsp;Thon&nbsp;albacore&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"alban"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;matricule&nbsp;?"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">,&nbsp;auditeur1.matricule</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;login&nbsp;?&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"le_tho_a"</font><font color="#000000">,&nbsp;auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_compose</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"Ton-Ton"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"max"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;Ton-Ton&nbsp;max&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"Ton-Ton"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;Ton-Ton&nbsp;max&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"max"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;Ton-Ton&nbsp;max&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"ton_to_m"</font><font color="#000000">,&nbsp;auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_court_avec_particule</font><font color="#000000">()&nbsp;{</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Te-Te"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"max"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;Te-Te&nbsp;max&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"Te-Te"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mr&nbsp;Te-Te&nbsp;max&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"max"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"nom&nbsp;court&nbsp;avec&nbsp;particules&nbsp;?&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"te_te_m"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">test_nom_avec_accent</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur1&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Chloé"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#2a00ff">"chloé"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12345"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mme&nbsp;Chloé&nbsp;chloé&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"Chloé"</font><font color="#000000">,&nbsp;auditeur1.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Mme&nbsp;Chloé&nbsp;chloé&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"chloé"</font><font color="#000000">,&nbsp;auditeur1.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;nom&nbsp;avec&nbsp;accent&nbsp;(é&nbsp;devient&nbsp;e)&nbsp;?&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"chloe_c"</font><font color="#000000">,</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">auditeur1.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck_1</font><font color="#000000">()</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur3&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Paul"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"Presté"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"12-653"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Paul&nbsp;Presté&nbsp;login&nbsp;:&nbsp;paul_p"</font><font color="#000000">,&nbsp;auditeur3.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck_nom_prenom_matricule_charact_spec</font><font color="#000000">()</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">question3.AuditeurCNAM&nbsp;auditeur2&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">question3.AuditeurCNAM</font><font color="#000000">(</font><font color="#2a00ff">"Ératon"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"^EæTÉO"</font><font color="#000000">,&nbsp;</font><font color="#2a00ff">"24556Af"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Ératon"</font><font color="#000000">,&nbsp;auditeur2.nom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"^EæTÉO"</font><font color="#000000">,&nbsp;auditeur2.prenom</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"24556Af"</font><font color="#000000">,&nbsp;auditeur2.matricule</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"Ératon&nbsp;^EæTÉO&nbsp;login&nbsp;:&nbsp;eraton__"</font><font color="#000000">,&nbsp;auditeur2.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"eraton__"</font><font color="#000000">,&nbsp;auditeur2.login</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#000000">}</font><br>
+<br>
+<font color="#ffffff">
+</font></code>
+</td>
+<!-- end source code -->
+</tr>
+
+</tbody></table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== -->
+</body></html>

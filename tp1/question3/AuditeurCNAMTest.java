@@ -60,7 +60,7 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
      * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test. Ces
      * méthodes doivent vérifier les résultats attendus à l'aide d'assertions
      * assertTrue(<boolean>). Par convention, leurs noms devraient débuter par
-     * "test". Vous pouvez ébaucher le corps grace au menu contextuel
+     * "test". Vous pouvez ébaucher le corps grâce au menu contextuel
      * "Enregistrer une méthode de test".
      */
 
@@ -122,4 +122,22 @@ public class AuditeurCNAMTest extends junit.framework.TestCase {
         assertEquals(" nom avec accent (é devient e) ? ", "chloe_c",
             auditeur1.login());
     }
+
+	public void testCheck_1()
+	{
+		question3.AuditeurCNAM auditeur3 = new question3.AuditeurCNAM("Paul", "Presté", "12-653");
+		assertEquals("Paul Presté login : paul_p", auditeur3.toString());
+	}
+
+	public void testCheck_nom_prenom_matricule_charact_spec()
+	{
+		question3.AuditeurCNAM auditeur2 = new question3.AuditeurCNAM("Ératon", "^EæTÉO", "24556Af");
+		assertEquals("Ératon", auditeur2.nom());
+		assertEquals("^EæTÉO", auditeur2.prenom());
+		assertEquals("24556Af", auditeur2.matricule());
+		assertEquals("Ératon ^EæTÉO login : eraton__", auditeur2.toString());
+		assertEquals("eraton__", auditeur2.login());
+	}
 }
+
+
