@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 
-
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
@@ -13,7 +15,8 @@ import java.text.DecimalFormat;
  * @author GPC
  */
 public class TP2 {
-
+	private JTextField entree = new JTextField( 6 );
+	entree.
     
     /**
      * @param args the command line arguments

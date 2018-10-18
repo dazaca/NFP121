@@ -1,119 +1,454 @@
-<html>
-<head>
-    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
-    <title>NFP121 - TP1</title>
-    <style type="text/css">
-        body {
-            background: #E5DED6;
-            background-color: #fff;
-            color: #333333;
-            font-size: 14px;
-            font-family: Verdana, Arial;
-        }
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><title>NFP121 - TP1</title>
 
-        table {
-            font-size: 20px;
-            border-color: #808080;
-            border-style: solid;
-            border-width: 1px;
-        }
 
-        h2 {
-            color: #C1002A;
-            font-family: Verdana, Arial;
-            font-size: 30px;
-            font-weight: bold;
-        }
+<style type="text/css">
+body {
+background: #E5DED6;
+background-color: #fff;
+color: #333333;
+font-size: 14px;
+font-family: Verdana, Arial;
+}
 
-        h3 {
-            color: #C1002A;
-            font-family: Verdana, Arial;
-            font-size: 20px;
-            font-weight: bold;
-        }
-        
-        hr {
-            margin: 15px 0 15px 0;
-        }
-		
-		applet {
-			margin: 10px 0px 25px 250px;
-			border-width: 1px;
-			border-style: solid;
-			border-color: #777777;
-		}
-		
-    </style>
+table {
+font-size: 20px;
+border-color: #808080;
+border-style: solid;
+border-width: 1px;
+}
 
-</head>
-<body>
-    <h2 style="text-align: center">NFP 121 - TP2</h2>
-    <h2 style="text-align: center">Conversion Fahrenheit - Celsius</h2>
-    <br />
-    <hr>
-    <br />
-    <table>
-        <tr>
-            <td>Nom
-            </td>
-            <td>...
-            </td>
-        </tr>
-        <tr>
-            <td>PrÈnom
-            </td>
-            <td>...
-            </td>
-        </tr>
-        <tr>
-            <td>Matricule
-            </td>
-            <td>...
-            </td>
-        </tr>
-    </table>
-    <br />
-    <hr />
-    <h3>Question 1 : canversion Fahrenheit - Celsius</h3>
-    Votre rÈponse...
-		
-    <hr />
-    <h3>Question 1.1 : classe de test</h3>
-    Votre rÈponse...
+h2 {
+color: #C1002A;
+font-family: Verdana, Arial;
+font-size: 30px;
+font-weight: bold;
+}
 
-    <br />
-    <hr />
-    <h3>Question 2 : Exception "runtime"</h3>
-    Votre rÈponse...
+h3 {
+color: #C1002A;
+font-family: Verdana, Arial;
+font-size: 20px;
+font-weight: bold;
+}
 
-    <br />
-    <hr />
-    <h3>Question 3 :</h3>
-	<applet code="question3.AppletteFahrenheit.class" align="baseline" width="400" height="66"><PARAM name="backgroundColor" value="0xc0c0c0"></applet>
-	<h1><P align=center>L'applette complÈtÈe</p></h1>
-    <br />
-    <hr />
-    <h3>Question 3.1 :</h3>
-    Votre rÈponse...
+hr {
+margin: 15px 0 15px 0;
+}
 
-    <br />
-    <hr />
-    <h3>Question 3.2 :</h3>
-    Votre rÈponse...
+applet {
+margin: 10px 0px 25px 250px;
+border-width: 1px;
+border-style: solid;
+border-color: #777777;
+}
 
-    <br />
-    <hr />
-    <h3>Question 3.3 :</h3>
-    Votre rÈponse...
+</style>
+<style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"><meta http-equiv="content-type" content="text/html; charset=utf-8"><style type="text/css">
+<!--code { font-family: Courier New, Courier; font-size: 10pt; margin: 0px; }-->
+</style><meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"></head><body style="background-color: rgb(153, 153, 153); color: rgb(0, 0, 0);" alink="#ee0000" link="#0000ee" vlink="#551a8b">
+<h2 style="text-align: center;">NFP 121 - TP2</h2>
+<h2 style="text-align: center;">Conversion Fahrenheit - Celsius</h2>
+<br>
+<hr> <br>
+<table style="width: 417px; height: 88px;">
+<tbody>
+<tr>
+<td>Nom </td>
+<td>Zafra C√°mara </td>
+</tr>
+<tr>
+<td>PrÈnom </td>
+<td>David</td>
+</tr>
+<tr>
+<td>Matricule </td>
+<td> FOD_0G5DRNAUKN7</td>
+</tr>
+</tbody>
+</table>
+<br>
+<hr>
+<h3>Question 1 : conversion Fahrenheit - Celsius</h3>
+&nbsp;&nbsp;&nbsp; Voici le code de la fonction qui permet de faire la
+conversion de grades Fahrenheit ‡ Celsius:<br>
+<br>
+<br>
 
-    <br />
-    <hr />
-    <h3>Question 3.4 :</h3>
-    Votre rÈponse...
-	
-    <br />
-    <hr />    
-        <h3>Conclusion, biliographie et remarques :</h3>
-        <i style="font-size:12px;">... Une seule page html, limitez le nombre de clics, (plus de 200 rapports ‡ corriger chaque semaine)</i>
-</body>
-</html>
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#ffffff">&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;la&nbsp;m√©thode&nbsp;√&nbsp;&nbsp;compl√©ter.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">f</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;la&nbsp;valeur&nbsp;en&nbsp;degr√©&nbsp;Fahrenheit</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@return&nbsp;</font><font color="#3f5fbf">la&nbsp;conversion&nbsp;en&nbsp;degr√©&nbsp;Celsius</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">f</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">c;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">div;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#000000">div&nbsp;=&nbsp;</font><font color="#000000">(</font><font color="#7f0055"><b>float</b></font><font color="#000000">)</font><font color="#990000">5</font><font color="#000000">/</font><font color="#990000">9</font><font color="#000000">;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#000000">c&nbsp;=&nbsp;&nbsp;</font><font color="#000000">(</font><font color="#000000">div&nbsp;*&nbsp;</font><font color="#000000">(</font><font color="#000000">f-</font><font color="#990000">32</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font color="#7f0055"><b>return&nbsp;&nbsp;</b></font><font color="#000000">c;<br>
+<br>
+</font><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font></code> </td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --><!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Voici le code contenant la fonction principale
+main:<br>
+<br>
+<br>
+<br>
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">FahrenheitCelsius&nbsp;</font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp; </font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;le&nbsp;point&nbsp;d'entr√©e&nbsp;de&nbsp;cette&nbsp;application,&nbsp;dont&nbsp;le&nbsp;commentaire&nbsp;est&nbsp;√&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;compl√©ter</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">args</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">main</font><font color="#000000">(</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000">args</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;pour&nbsp;tous&nbsp;les&nbsp;param√®tres&nbsp;de&nbsp;la&nbsp;ligne&nbsp;de&nbsp;commande</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">fahrenheit&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Pour&nbsp;la&nbsp;sauvegarde&nbsp;la&nbsp;valeur&nbsp;pass√©e&nbsp;des&nbsp;degr√©s&nbsp;fahrenheit&nbsp;par&nbsp;l'utilisateur&nbsp;et&nbsp;l'utiliser&nbsp;dans&nbsp;la&nbsp;m√©thode&nbsp;qui&nbsp;la&nbsp;transformera&nbsp;en&nbsp;la&nbsp;valeur&nbsp;celsius.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">celsius&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Pour&nbsp;la&nbsp;sauvegarde&nbsp;de&nbsp;la&nbsp;valeur&nbsp;obtenu&nbsp;√&nbsp;&nbsp;partir&nbsp;de&nbsp;la&nbsp;conversion&nbsp;faite&nbsp;par&nbsp;notre&nbsp;m√©thode.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f"></font><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">String&nbsp;Arg&nbsp;:&nbsp;args</font><font color="#000000">)&nbsp;{ </font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fahrenheit&nbsp;=&nbsp;Integer.parseInt</font><font color="#000000">(</font><font color="#000000">Arg</font><font color="#000000">)</font><font color="#000000">; </font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">celsius&nbsp;=&nbsp;fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;On&nbsp;passe&nbsp;la&nbsp;valeur&nbsp;du&nbsp;champ&nbsp;fahrenheit&nbsp;√&nbsp;&nbsp;la&nbsp;m√©thode&nbsp;de&nbsp;conversion,&nbsp;puis&nbsp;on&nbsp;assigne&nbsp;la&nbsp;valeur&nbsp;retourn√©e&nbsp;par&nbsp;cette&nbsp;m√©thode&nbsp;au&nbsp;champ&nbsp;celsius.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">java.text.DecimalFormat&nbsp;df&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">java.text.DecimalFormat</font><font color="#000000">(</font><font color="#2a00ff">"#.#"</font><font color="#000000">)</font>;<br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#000000">fahrenheit&nbsp;+&nbsp;</font><font color="#2a00ff">"\u00B0F&nbsp;-&gt;&nbsp;"&nbsp;</font><font color="#000000">+&nbsp;df.format</font><font color="#000000">(</font><font color="#000000">celsius</font><font color="#000000">)&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">"\u00B0C"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font></code> </td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --><!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<br>
+<br>
+<hr>
+<h3>Question 1.1 : classe de test</h3>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; AprËs une vÈrification
+de la correcte exÈcution des test unitaires proposÈs...<br>
+<br>
+<br>
+<img style="width: 798px; height: 756px;" alt="" src="images/1.jpeg"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<span style="color: rgb(51, 51, 51); font-family: Verdana,Arial; font-size: 14px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(192, 192, 192); display: inline ! important; float: none;"></span>&nbsp;&nbsp;&nbsp;
+... on a crÈe notre propre test "testCheck qui permet de mettre en
+pratique la crÈation des mes propres test unitaires pour constater que
+la convertion se fait correctement:<br>
+<br>
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;¬∞F&nbsp;-&gt;&nbsp;0.0&nbsp;¬∞C&nbsp;?&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">0.0</font><font color="#000000">,&nbsp;question1.FahrenheitCelsius.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#990000">32</font><font color="#000000">)</font><font color="#000000">,&nbsp;</font><font color="#990000">0.1</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --><!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<img style="width: 799px; height: 760px;" alt="" src="images/2.jpeg"><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<hr><br>
+<br>
+<h3>Question 2 : Exception "runtime"</h3>
+<br>
+&nbsp;&nbsp;&nbsp; Voici la nouvelle version de la classe
+FahrenheitCelsius:<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;D√©crivez&nbsp;votre&nbsp;classe&nbsp;FahrenheitCelsius&nbsp;ici.</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@author&nbsp;</font><font color="#3f5fbf">(votre&nbsp;nom)&nbsp;</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@version&nbsp;</font><font color="#3f5fbf">(un&nbsp;num√©ro&nbsp;de&nbsp;version&nbsp;ou&nbsp;une&nbsp;date)</font><br>
+<font color="#ffffff">&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#7f0055"><b>public&nbsp;class&nbsp;</b></font><font color="#000000">FahrenheitCelsius</font><font color="#000000">{</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">/**&nbsp;le&nbsp;point&nbsp;d'entr√©e&nbsp;de&nbsp;cette&nbsp;application,&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;dont&nbsp;le&nbsp;commentaire&nbsp;est&nbsp;√&nbsp;&nbsp;compl√©ter</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">args&nbsp;...</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;static&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">main</font><font color="#000000">(</font><font color="#000000">String</font><font color="#000000">[]&nbsp;</font><font color="#000000">args</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;pour&nbsp;tous&nbsp;les&nbsp;param√®tres&nbsp;de&nbsp;la&nbsp;ligne&nbsp;de&nbsp;commande</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">fahrenheit&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Pour&nbsp;la&nbsp;sauvegarde&nbsp;la&nbsp;valeur&nbsp;pass√©e&nbsp;des&nbsp;degr√©s&nbsp;fahrenheit&nbsp;par&nbsp;l'utilisateur&nbsp;et&nbsp;l'utiliser&nbsp;dans&nbsp;la&nbsp;m√©thode&nbsp;qui&nbsp;la&nbsp;transformera&nbsp;en&nbsp;la&nbsp;valeur&nbsp;celsius.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">celsius&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;Pour&nbsp;la&nbsp;sauvegarde&nbsp;de&nbsp;la&nbsp;valeur&nbsp;obtenu&nbsp;√&nbsp;&nbsp;partir&nbsp;de&nbsp;la&nbsp;conversion&nbsp;faite&nbsp;par&nbsp;notre&nbsp;m√©thode.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>for&nbsp;</b></font><font color="#000000">(</font><font color="#000000">String&nbsp;Arg&nbsp;:&nbsp;args</font><font color="#000000">)&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fahrenheit&nbsp;=&nbsp;Integer.parseInt</font><font color="#000000">(</font><font color="#000000">Arg</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">celsius&nbsp;=&nbsp;fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;On&nbsp;passe&nbsp;la&nbsp;valeur&nbsp;du&nbsp;champ&nbsp;fahrenheit&nbsp;√&nbsp;&nbsp;la&nbsp;m√©thode&nbsp;de&nbsp;conversion,&nbsp;puis&nbsp;on&nbsp;assigne&nbsp;la&nbsp;valeur&nbsp;retourn√©e&nbsp;par&nbsp;cette&nbsp;m√©thode&nbsp;au&nbsp;champ&nbsp;celsius.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">java.text.DecimalFormat&nbsp;df&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">java.text.DecimalFormat</font><font color="#000000">(</font><font color="#2a00ff">"#.#"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#000000">fahrenheit&nbsp;+&nbsp;</font><font color="#2a00ff">"\u00B0F&nbsp;-&gt;&nbsp;"&nbsp;</font><font color="#000000">+&nbsp;df.format</font><font color="#000000">(</font><font color="#000000">celsius</font><font color="#000000">)&nbsp;</font><font color="#000000">+&nbsp;</font><font color="#2a00ff">"\u00B0C"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">NumberFormatException&nbsp;nfe</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">System.out.println</font><font color="#000000">(</font><font color="#2a00ff">"error&nbsp;:&nbsp;"&nbsp;</font><font color="#000000">+&nbsp;nfe.getMessage</font><font color="#000000">())</font><font color="#000000">;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;en&nbsp;cas&nbsp;d'erreur&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font></code> </td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --> <tr>
+<td align="right"><small>
+<a href="http://www.java2html.de/" target="_blank">Java2html</a>
+</small> </td>
+</tr>
+<!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<br>
+<br>
+<br>
+&nbsp;&nbsp;&nbsp; Comme attendu, le rÈsultat en console montre que
+l'exception est levÈe lors du deuxiËme paramËtre:<br>
+<br>
+<br>
+<br>
+<img style="width: 921px; height: 615px;" alt="" src="images/3.jpeg"><br>
+<br>
+<br>
+<h3><br>
+</h3>
+<h3><br>
+</h3>
+<h3>Question 2.1 : la classe de tests unitaires<br>
+</h3>
+&nbsp;&nbsp;&nbsp; Voici le code correspondant ‡ la classe de tests
+unitaires:<br>
+<br>
+&nbsp;&nbsp;&nbsp;
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#ffffff">&nbsp;</font><font color="#3f5fbf">/**</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Il&nbsp;ne&nbsp;vous&nbsp;reste&nbsp;plus&nbsp;qu'√&nbsp;&nbsp;d√©finir&nbsp;une&nbsp;ou&nbsp;plusieurs&nbsp;m√©thodes&nbsp;de&nbsp;test.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Ces&nbsp;m√©thodes&nbsp;doivent&nbsp;v√©rifier&nbsp;les&nbsp;r√©sultats&nbsp;attendus&nbsp;√&nbsp;&nbsp;l'aide&nbsp;d'assertions</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;assertTrue(</font><font color="#7f7f9f">&lt;boolean&gt;</font><font color="#3f5fbf">).</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Par&nbsp;convention,&nbsp;leurs&nbsp;noms&nbsp;devraient&nbsp;d√©buter&nbsp;par&nbsp;"test".</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;Vous&nbsp;pouvez&nbsp;√©baucher&nbsp;le&nbsp;corps&nbsp;gr√¢ce&nbsp;au&nbsp;menu&nbsp;contextuel&nbsp;"Enregistrer&nbsp;une&nbsp;m√©thode&nbsp;de&nbsp;test".</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">testCheck2</font><font color="#000000">()&nbsp;{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">assertEquals</font><font color="#000000">(</font><font color="#2a00ff">"&nbsp;&nbsp;&nbsp;&nbsp;32&nbsp;¬∞F&nbsp;-&gt;&nbsp;0.0&nbsp;¬∞C&nbsp;?&nbsp;"</font><font color="#000000">,&nbsp;</font><font color="#990000">0.0</font><font color="#000000">,&nbsp;question1.FahrenheitCelsius.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#990000">32</font><font color="#000000">)</font><font color="#000000">,&nbsp;</font><font color="#990000">0.1</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --><!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+<br>
+<br>
+<img style="width: 855px; height: 754px;" alt="" src="images/4.jpeg"><br>
+<br>
+<br>
+<br>
+<hr>
+<h3>Question 3 :</h3>
+<applet code="question3.AppletteFahrenheit.class" archive="applettes.jar" align="bottom" height="66" width="400"><paramname="backgroundcolor" value="0xc0c0c0"></paramname="backgroundcolor"></applet>
+<h1>
+<p align="center">L'applette complËte</p>
+</h1>
+&nbsp;&nbsp; <br>
+<hr>
+<h3>Question 3.1 :</h3>
+&nbsp;&nbsp;&nbsp; Voici le code modifi√© de la m√©thode
+actionPerformed() qui permet de prendre en compte les valeurs dans
+l'applet (pas de modifications dans le reste du code):<br>
+<br>
+<br>
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#3f5fbf">/**&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;m√©thode&nbsp;d√©clench√©e&nbsp;lorsque&nbsp;le&nbsp;bouton&nbsp;de&nbsp;conversion&nbsp;est&nbsp;appuy√©.&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;remarquer&nbsp;que&nbsp;le&nbsp;champs&nbsp;de&nbsp;droite&nbsp;(les&nbsp;degr√©s&nbsp;Celsius)&nbsp;n'est&nbsp;pas&nbsp;√©ditable.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">ae&nbsp;l'√©v√©nement&nbsp;transmis</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">actionPerformed</font><font color="#000000">(&nbsp;</font><font color="#000000">ActionEvent&nbsp;ae&nbsp;</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">fahrenheit&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;valeur&nbsp;est&nbsp;une&nbsp;String&nbsp;et&nbsp;doit&nbsp;√™tre&nbsp;convertie&nbsp;en&nbsp;entier,&nbsp;voir&nbsp;java.lang.Integer&nbsp;m√©thode&nbsp;parseInt&nbsp;(--&gt;&nbsp;try/catch)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">celsius&nbsp;=&nbsp;</font><font color="#990000">0F</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;√&nbsp;&nbsp;compl√©ter,&nbsp;en&nbsp;appelant&nbsp;la&nbsp;m√©thode&nbsp;ad'hoc&nbsp;de&nbsp;la&nbsp;question2&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;un&nbsp;test&nbsp;ici&nbsp;pour&nbsp;le&nbsp;z√©ro&nbsp;absolu&nbsp;(-273.1)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FahrenheitCelsius&nbsp;fc&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">FahrenheitCelsius</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fahrenheit&nbsp;=&nbsp;Integer.parseInt</font><font color="#000000">(</font><font color="#000000">entree.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">celsius&nbsp;=&nbsp;fc.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;On&nbsp;passe&nbsp;la&nbsp;valeur&nbsp;du&nbsp;champ&nbsp;fahrenheit&nbsp;√&nbsp;&nbsp;la&nbsp;m√©thode&nbsp;de&nbsp;conversion,&nbsp;puis&nbsp;on&nbsp;assigne&nbsp;la&nbsp;valeur&nbsp;retourn√©e&nbsp;par&nbsp;cette&nbsp;m√©thode&nbsp;au&nbsp;champ&nbsp;celsius.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">java.text.DecimalFormat&nbsp;df&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">java.text.DecimalFormat</font><font color="#000000">(</font><font color="#2a00ff">"#.#"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sortie.setText</font><font color="#000000">(&nbsp;</font><font color="#000000">Float.toString</font><font color="#000000">(&nbsp;</font><font color="#000000">celsius</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">NumberFormatException&nbsp;nfe</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sortie.setText</font><font color="#000000">(</font><font color="#2a00ff">"error&nbsp;!&nbsp;"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --> <tr>
+<td align="right"><small>
+<a href="http://www.java2html.de/" target="_blank">Java2html</a>
+</small> </td>
+</tr>
+<!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+&nbsp;&nbsp;&nbsp; <br>
+<hr>
+<h3>Question 3.2 Prise en compte de l'exception "NumberFormatException"
+
+<span style="color: rgb(193, 0, 42); font-family: Verdana,Arial; font-size: 20px; font-style: normal; font-weight: 700; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;"></span>:</h3>
+&nbsp;&nbsp;&nbsp; La prise en compte de l'exception est d√©j√&nbsp; inclue
+dans le code pr√©c√©dent.<br>
+<hr>
+<h3>Question 3.3 :</h3>
+<br>
+
+
+
+<!-- ======================================================== -->
+<!-- = Java Sourcecode to HTML automatically converted code = --><!-- = Java2Html Converter 5.0 [2006-02-26] by Markus Gebhard markus@jave.de = -->
+<!-- = Further information: http://www.java2html.de = -->
+<div class="java" align="left">
+<table bgcolor="#ffffff" border="0" cellpadding="3" cellspacing="0">
+<tbody>
+<tr>
+<!-- start source code --> <td align="left" nowrap="nowrap" valign="top"> <code><font color="#ffffff">&nbsp;</font><font color="#3f5fbf">/**&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;m√©thode&nbsp;d√©clench√©e&nbsp;lorsque&nbsp;le&nbsp;bouton&nbsp;de&nbsp;conversion&nbsp;est&nbsp;appuy√©.&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;remarquer&nbsp;que&nbsp;le&nbsp;champs&nbsp;de&nbsp;droite&nbsp;(les&nbsp;degr√©s&nbsp;Celsius)&nbsp;n'est&nbsp;pas&nbsp;√©ditable.</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*&nbsp;</font><font color="#7f9fbf">@param&nbsp;</font><font color="#3f5fbf">ae&nbsp;l'√©v√©nement&nbsp;transmis</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;</font><font color="#3f5fbf">*/</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#7f0055"><b>public&nbsp;</b></font><font color="#7f0055"><b>void&nbsp;</b></font><font color="#000000">actionPerformed</font><font color="#000000">(&nbsp;</font><font color="#000000">ActionEvent&nbsp;ae&nbsp;</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>try</b></font><font color="#000000">{</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>int&nbsp;</b></font><font color="#000000">fahrenheit&nbsp;=&nbsp;</font><font color="#990000">0</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;valeur&nbsp;est&nbsp;une&nbsp;String&nbsp;et&nbsp;doit&nbsp;√™tre&nbsp;convertie&nbsp;en&nbsp;entier,&nbsp;voir&nbsp;java.lang.Integer&nbsp;m√©thode&nbsp;parseInt&nbsp;(--&gt;&nbsp;try/catch)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#7f0055"><b>float&nbsp;</b></font><font color="#000000">celsius&nbsp;=&nbsp;</font><font color="#990000">0F</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;√&nbsp;&nbsp;compl√©ter,&nbsp;en&nbsp;appelant&nbsp;la&nbsp;m√©thode&nbsp;ad'hoc&nbsp;de&nbsp;la&nbsp;question2&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#3f7f5f">//&nbsp;un&nbsp;test&nbsp;ici&nbsp;pour&nbsp;le&nbsp;z√©ro&nbsp;absolu&nbsp;(-273.1)</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">FahrenheitCelsius&nbsp;fc&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">FahrenheitCelsius</font><font color="#000000">()</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fahrenheit&nbsp;=&nbsp;Integer.parseInt</font><font color="#000000">(</font><font color="#000000">entree.toString</font><font color="#000000">())</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">fc.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)&nbsp;</font><font color="#000000">&gt;&nbsp;</font><font color="#990000">273.1</font><font color="#000000">)&nbsp;</font><font color="#000000">?&nbsp;celsius&nbsp;=&nbsp;fc.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)&nbsp;</font><font color="#000000">:&nbsp;celsius&nbsp;=&nbsp;</font><font color="#7f0055"><b>null&nbsp;</b></font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;On&nbsp;passe&nbsp;la&nbsp;valeur&nbsp;du&nbsp;champ&nbsp;fahrenheit&nbsp;√&nbsp;&nbsp;la&nbsp;m√©thode&nbsp;de&nbsp;conversion,&nbsp;puis&nbsp;on&nbsp;assigne&nbsp;la&nbsp;valeur&nbsp;retourn√©e&nbsp;par&nbsp;cette&nbsp;m√©thode&nbsp;au&nbsp;champ&nbsp;celsius.</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">celsius&nbsp;=&nbsp;fc.fahrenheitEnCelsius</font><font color="#000000">(</font><font color="#000000">fahrenheit</font><font color="#000000">)</font><font color="#000000">;&nbsp;</font><font color="#3f7f5f">//&nbsp;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">java.text.DecimalFormat&nbsp;df&nbsp;=&nbsp;</font><font color="#7f0055"><b>new&nbsp;</b></font><font color="#000000">java.text.DecimalFormat</font><font color="#000000">(</font><font color="#2a00ff">"#.#"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff"></font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sortie.setText</font><font color="#000000">(&nbsp;</font><font color="#000000">Float.toString</font><font color="#000000">(&nbsp;</font><font color="#000000">celsius</font><font color="#000000">))</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><font color="#7f0055"><b>catch</b></font><font color="#000000">(</font><font color="#000000">NumberFormatException&nbsp;nfe</font><font color="#000000">){</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">sortie.setText</font><font color="#000000">(</font><font color="#2a00ff">"error&nbsp;!&nbsp;"</font><font color="#000000">)</font><font color="#000000">;</font><br>
+<font color="#ffffff">&nbsp;&nbsp;&nbsp;&nbsp;</font><font color="#000000">}</font><br>
+<font color="#ffffff">&nbsp;&nbsp;</font><font color="#000000">}</font></code>
+</td>
+<!-- end source code --> </tr>
+<!-- start Java2Html link --> <tr>
+<td align="right"><small>
+<a href="http://www.java2html.de/" target="_blank">Java2html</a>
+</small> </td>
+</tr>
+<!-- end Java2Html link -->
+</tbody>
+</table>
+</div>
+<!-- = END of automatically generated HTML code = -->
+<!-- ======================================================== --><br>
+&nbsp;<br>
+<hr>
+
+</body></html>
