@@ -12,7 +12,8 @@ public class td2_1 {
 
 	public static void main(String[] args) {
 
-		int a, b, res;
+        int a;
+        int last;
 		int x = 6;
 		int m[] = new int[x];
 		int sum = 0;
@@ -23,7 +24,16 @@ public class td2_1 {
 			m[i] = clavier.nextInt();
 		}
 
-		System.out.println("Bonjour. Voici votre tableau: " + Arrays.toString(m));
+		System.out.println("Array: " + Arrays.toString(m));
+        System.out.println("\nIntroduzca el número a encontrar: ");
+        a = clavier.nextInt();
+        
+        // On transforme l'array dans arraylist pour appliquer la méthode
+        // "lastIndexOf()".
+        
+        ArrayList m2 = new ArrayList<>(Arrays.asList(m));
+		last = m2.lastIndexOf(a);
+		System.out.println("\nEl índice asociado a la última ocurrencia es [" + last + "]");
 		
 	}
 	
