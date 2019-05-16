@@ -7,14 +7,14 @@ import java.util.*;
 // Ecrire un programme qui recherche et affiche le plus grand élément du tableau.
 
 
-public class td2_3 {
+public class td2_4 {
 
 	public static void main(String[] args) {
 
         int a;
         int last;
 		int x = 6;
-
+        Integer sum = 0;
 		//int m[] = new int[x];
 		
 		//	for (int i = 0; i < x; i++) {
@@ -23,7 +23,7 @@ public class td2_3 {
 		//		m[i] = clavier.nextInt();
 		//	}
 
-		Integer[] m = new Integer[]{12,31,31,4,53,31};		
+		Integer[] m = new Integer[]{1,2,3,4,5,6};		
 
 		System.out.println("Array: " + Arrays.toString(m));
                 
@@ -31,13 +31,14 @@ public class td2_3 {
         // "lastIndexOf()".
 				
 		List<Integer> intList = new ArrayList<Integer>(Arrays.asList(m));
+				
+		for (Integer i : intList) {
+        
+            sum += i;
+            
+		}
 		
-		// Pour parcourrir la liste
-		//  for (int m2aux : intList) {
-		//  	System.out.println(m2aux);
-		//  }
-		
-		System.out.println("\nEl valor asociado al elemento mayor es [" + (Collections.max(intList)) + "]");
+		System.out.println("\nEl valor medio es [" + sum.doubleValue() / intList.size() + "]");
 		
 	
 	}
