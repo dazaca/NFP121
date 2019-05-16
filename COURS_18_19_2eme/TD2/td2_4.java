@@ -34,8 +34,7 @@ public class td2_4 {
 				
 		for (Integer i : intList) {
         
-            sum += i;
-            
+            sum += i;            
 		}
 		
 		System.out.println("\nEl valor medio es [" + sum.doubleValue() / intList.size() + "]");

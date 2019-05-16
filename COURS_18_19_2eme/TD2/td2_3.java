@@ -8,13 +8,12 @@ import java.util.*;
 
 
 public class td2_3 {
-
 	public static void main(String[] args) {
 
         int a;
         int last;
 		int x = 6;
-
+		
 		//int m[] = new int[x];
 		
 		//	for (int i = 0; i < x; i++) {
