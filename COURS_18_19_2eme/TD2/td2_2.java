@@ -16,6 +16,7 @@ public class td2_2 {
         int a;
         int last;
 		int x = 6;
+		
 		//int m[] = new int[x];
 		
 		//	for (int i = 0; i < x; i++) {
