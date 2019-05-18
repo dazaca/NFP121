@@ -11,9 +11,7 @@ public class td2_4 {
 
 	public static void main(String[] args) {
 
-        int a;
-        int last;
-		int x = 6;
+        
         Integer sum = 0;
 		//int m[] = new int[x];
 		
