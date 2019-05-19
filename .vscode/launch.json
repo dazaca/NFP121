@@ -1,0 +1,140 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UF4_3_ARRAYS",
+            "request": "launch",
+            "mainClass": "UF4_3_ARRAYS",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UF4_2_ARRAYS",
+            "request": "launch",
+            "mainClass": "UF4_2_ARRAYS",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - UF4_1_ARRAYS",
+            "request": "launch",
+            "mainClass": "UF4_1_ARRAYS",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - test_override",
+            "request": "launch",
+            "mainClass": "test_override"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestPolyReg<COURS_2_CLASSES>",
+            "request": "launch",
+            "mainClass": "TestPolyReg",
+            "projectName": "COURS_2_CLASSES"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-B<COURS_2_CLASSES>",
+            "request": "launch",
+            "mainClass": "cours3.B",
+            "projectName": "COURS_2_CLASSES"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Exemple5<COURS_2_CLASSES>",
+            "request": "launch",
+            "mainClass": "cours3.Exemple5",
+            "projectName": "COURS_2_CLASSES"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TP2",
+            "request": "launch",
+            "mainClass": "TP2"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FahrenheitCelsius",
+            "request": "launch",
+            "mainClass": "question1.FahrenheitCelsius"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IHMPile",
+            "request": "launch",
+            "mainClass": "question1.IHMPile"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UneUtilisation",
+            "request": "launch",
+            "mainClass": "question1.UneUtilisation"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FahrenheitCelsius(1)",
+            "request": "launch",
+            "mainClass": "question2.FahrenheitCelsius"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-IHMFahrenheit",
+            "request": "launch",
+            "mainClass": "question3.IHMFahrenheit"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-UneUtilisation(1)",
+            "request": "launch",
+            "mainClass": "question3.UneUtilisation"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-td2_1",
+            "request": "launch",
+            "mainClass": "td2_1"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-td2_2",
+            "request": "launch",
+            "mainClass": "td2_2"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-td2_3",
+            "request": "launch",
+            "mainClass": "td2_3"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-td2_4",
+            "request": "launch",
+            "mainClass": "td2_4"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-td2_5",
+            "request": "launch",
+            "mainClass": "td2_5"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-tests",
+            "request": "launch",
+            "mainClass": "tests"
+        }
+    ]
+}
